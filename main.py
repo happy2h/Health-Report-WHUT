@@ -124,7 +124,7 @@ if __name__ == '__main__':
     # 地址格式为：province+city+county+street
     res = request_monitorRegister(sessionId, "湖北省", "仙桃市", "仙桃市", "永乐路6号")
     if res['code'] == 0:
-        mail.sendmail(["success", res['message']])
+        mail.sendmail(["success", "今日打卡成功"])
     else:
         mail.sendmail(["error", res['message']])
     cancelBind(sessionId)
