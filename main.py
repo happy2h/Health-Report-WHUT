@@ -25,7 +25,6 @@ def request_sessionId(json_data):
 
         "Referer": "https://servicewechat.com/wx225eb50c34f6f98e/13/page-frame.html",
         "X-Tag": "flyio",
-        "Content-Length": "136",
         # "Accept-Language": "zh-cn",
         "Connection": "keep - alive",
         "Host": "yjsxx.whut.edu.cn"
@@ -48,7 +47,6 @@ def request_bindUserInfo(sessionId, json_data):
         "Cookie": "JSESSIONID=%s" % (sessionId),
         # "Accept": "*/*",
         "X-Tag": "flyio",
-        "Content-Length": "296",
         # "Accept-Language": "zh-cn",
         "Connection": "keep - alive",
         "Host": "yjsxx.whut.edu.cn"
@@ -70,7 +68,6 @@ def request_monitorRegister(sessionId, province, city, county, street):
         "Cookie": "JSESSIONID=%s" % (sessionId),
         # "Accept": "*/*",
         "X-Tag": "flyio",
-        "Content-Length": "552",
         # "Accept-Language": "zh-cn",
         "Connection": "keep - alive",
         "Host": "yjsxx.whut.edu.cn"
