@@ -4,7 +4,7 @@ import random
 import mail
 import requests
 
-temperature = ["36\"C~36.5°C", "36.5°C~36.9°C"]
+temperature = ["36.5°C~36.9°C"]
 
 useragentlist = [
     "Mozilla/5.0 (Linux; U; Android 7.1.2; zh-cn; MI 6 Build/NXTHUAWEI) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 MQQBrowser/9.9 Mobile Safari/537.36",
@@ -85,8 +85,8 @@ def request_monitorRegister(sessionId, province, city, county, street):
         "healthInfo": "正常",
         "isDiagnosis": "0",
         "isFever": "0",
-        "isInSchool": "0",
-        "isLeaveChengdu": "1",
+        "isInSchool": "1",
+        "isLeaveChengdu": "0",
         "isSymptom": "0",
         "temperature": random.choice(temperature),
         "noonTemperature": random.choice(temperature),
@@ -122,7 +122,7 @@ if __name__ == '__main__':
     sessionId = request_sessionId(data)
     request_bindUserInfo(sessionId, data)
     # 地址格式为：province+city+county+street
-    res = request_monitorRegister(sessionId, "湖北省", "仙桃市", "仙桃市", "永乐路6号")
+    res = request_monitorRegister(sessionId, "湖北省", "武汉市", "洪山区", "雄楚大道221号")
     if res['code'] == 0:
         mail.sendmail(["success", "今日打卡成功"])
     else:
