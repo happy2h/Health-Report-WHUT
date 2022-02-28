@@ -22,6 +22,10 @@ pip install yagmaill
 
 安装完成后直接运行main.py即可
 
+## ios快捷指令
+[icloud分享链接][2]，手机上使用safari打开，导入后修改成自己的登录账号（身份证或者学号），密码，如果要修改打开地点和是否在校可以更改monitorRegister的内容，如下图：
+![修改地址等信息][3]
+
 ## 服务器部署
 
 把脚本部署到宝塔面板上，首先上传文件到宝塔目录里，记录路径。由于之前宝塔安装的是python2.7，需要升级python版本。
@@ -29,6 +33,9 @@ pip install yagmaill
 注意这里遇到的坑，直接下载python3以上的版本解压编译，然后运行脚本会提示`ssl no host`的错误，原因在编译python时没有编译ssl模块.
 
 解决方法：在**编译python3前**指定openssl的安装目录。
+
+[2]: https://www.icloud.com/shortcuts/4b407f795c484b5ca55e0ce096c8f8bc
+[3]: https://blogcdn.nickxie.top/blog-img/7350A834A9E069CD3F813F889D7422F7.png
 
 这里需要查看你服务器安装openssl没有，使用`whereis openssl`找到openssl的安装目录，一般在`usr\local\openssl`，没有的话可以先安装open ssl1.0.2以上的版本。[仓库地址](https://github.com/openssl/openssl/releases)，上传到宝塔自定义目录，解压编译安装：
 
